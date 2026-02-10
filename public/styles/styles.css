@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quintessential&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --sagebrush: #649B7A;
+    --iron-ore: #2B2B2B;
+    --cool-ash: #D1D1D1;
+    --pure-white: #FFFFFF;
+    --header-height: 170px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    padding-top: var(--header-height);
+    color: var(--iron-ore);
+}
+
+/* Header Section Styling */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--pure-white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 95%;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 20px 5%;
+}
+
+.logo-img {
+    height: 126px; 
+    width: auto;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--iron-ore); 
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-left: 30px;
+    transition: color 0.3s ease;
+}
+
+/* Change link color to sagebrush with mouse hover */
+.nav-links a:hover {
+    color: var(--sagebrush); 
+}
+
+/* Home Page Main Content Styling */
+.hero {
+    background-color: var(--sagebrush);
+    position: relative;
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 5%;
+    background-image: url("https://www.transparenttextures.com/patterns/brushed-alum-dark.png");
+}
+
+.hero-content h1 {
+    font-family: 'Quintessential', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    color: var(--pure-white);
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.hero-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    color: var(--pure-white);
+    margin-bottom: 35px;
+    max-width: 600px;
+    opacity: 0.95;
+}
+
+.btn-hero {
+    background-color: var(--pure-white); 
+    color: var(--sagebrush);           
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-hero:hover {
+    background-color: var(--iron-ore);
+    color: var(--pure-white);
+    transform: translateY(-2px);
+}
+
+/* Contact Page Styling */
+.contact-container {
+    background-color: var(--sagebrush);
+    position: relative;
+    min-height: 80vh; 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 5%;
+    background-image: url("https://www.transparenttextures.com/patterns/brushed-alum-dark.png");
+}
+
+.main-message-container {
+    padding: 40px;
+    width: 100%;
+    max-width: 1000px;
+    background-color: var(--cool-ash);
+    border-radius: 8px; 
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.message-headings {
+    flex: 1;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--iron-ore);
+}
+
+.main-message-container form {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-group,
+.message-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.input-group label,
+.message-container label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.input-group input, 
+.input-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.message-container textarea {
+    height: 150px; 
+    width: 100%;   
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.form-actions button {
+    background-color: var(--sagebrush);
+    color: white;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-actions button:hover {
+    background-color: var(--iron-ore);
+}
+
+.success-display {
+    text-align: center;
+    padding: 40px;
+    width: 100%;
+}
+
+.success-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.success-display h2 {
+    color: var(--iron-ore);
+    margin-bottom: 15px;
+}
+
+.btn-back {
+    display: inline-block;
+    background-color: var(--sagebrush);
+    color: white;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-back:hover {
+    background-color: var(--iron-ore);
+    color: white; /* Keeps text white on hover */
+}
+
+/* Footer Styling */
+.main-footer {
+    background-color: var(--pure-white);
+    border-top: 2px solid var(--sagebrush);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-content {
+    font-family: 'Montserrat', sans-serif;
+    font-size: small;
+    letter-spacing: 2px;
+    color: var(--iron-ore);
+    opacity: 0.7;
+}
+
+/* --- Media Queries for Responsiveness --- */
+/* Mobile & Tablet */
+@media (max-width: 768px) {
+    .logo-img {
+        height: 95px; 
+    }
+    .hero {
+        justify-content: center; 
+        text-align: center;      
+        padding: 0 20px;         
+    }
+
+    .hero-content p {
+        margin: 0 auto 35px;    
+    }
+
+    /* Contact Page Layout Fix */
+    .main-message-container {
+        flex-direction: column; 
+        align-items: center;
+        padding: 30px 20px;
+    }
+
+    .message-headings {
+        text-align: center;     
+        margin-bottom: 20px;
+    }
+
+    .main-message-container form {
+        width: 100%;            
+    }
+    
+    .form-actions {
+        justify-content: center; 
+    }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 480px) {
+    :root {
+        --header-height: 220px; 
+    }
+
+    .header-container {
+        flex-direction: column; 
+        gap: 15px;
+        padding: 15px 0;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center; 
+        margin: 0;
+        width: 100%;
+    }
+
+    .nav-links a {
+        flex: 0 0 45%;
+        margin: 10px 0; 
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;        
+    }
+    
+    .btn-hero {
+        display: block;         
+        margin-bottom: 10px;
+    }
+}

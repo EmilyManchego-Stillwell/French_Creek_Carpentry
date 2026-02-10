@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/styles.css">
+  <title>Contact Us</title>
+</head>
+<body>
+  <%- include("partials/header.ejs") %>
+  <div class="contact-container">
+    <div class="main-message-container">
+      <% if (success) { %>
+        <div class="success-display">
+          <div class="success-icon">🌿</div>
+          <h2>Message Sent!</h2>
+          <p><%= success %></p>
+          <a href="/contact" class="btn-back">Send another message</a>
+        </div>
+      <% } else { %>
+        <div class="message-headings">
+          <h2>Looking for some custom woodwork?</h2>
+          <h3>Let us know how we can help you!</h3>
+        </div>
+
+        <form action="/contact" method="POST"> 
+          <div class="input-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="userName" required>
+          </div>
+
+          <div class="input-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="userEmail" required>
+          </div>
+
+          <div class="message-container">
+            <label for="message">Message:</label>
+            <textarea id="message" name="userMessage" required></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit">Send Message</button>
+          </div>
+        </form>
+      <% } %>
+    </div>  
+  </div>
+  <%- include("partials/footer.ejs") %>
+</body>
+</html>
