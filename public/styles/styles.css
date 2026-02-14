@@ -12,10 +12,20 @@
     --header-height: 170px;
 }
 
+/* Shared Styling */
 body {
     font-family: 'Inter', sans-serif;
     padding-top: var(--header-height);
     color: var(--iron-ore);
+}
+
+.main-container {
+    background-color: var(--sagebrush);
+    background-image: url("https://www.transparenttextures.com/patterns/brushed-alum-dark.png");
+    min-height: 80vh; 
+    width: 100%;
+    display: flex;
+    padding: 40px 5%;
 }
 
 /* Header Section Styling */
@@ -105,31 +115,52 @@ body {
 }
 
 /* About Us Page Styling */
-.about-container {
-    background-color: var(--sagebrush);
-    position: relative;
-    min-height: 80vh; 
-    width: 100%;
-    display: flex;
+.about-layout {
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 40px 5%;
-    background-image: url("https://www.transparenttextures.com/patterns/brushed-alum-dark.png");
+    text-align: center;
+    gap: 30px;
+}
+
+.about-header {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--pure-white);
+}
+
+.about-header h2 {
+    font-family: 'Quintessential', sans-serif;
+    margin-bottom: 0;
+}
+
+.about-content {
+    background-color: var(--pure-white);
+    color: var(--iron-ore);
+    border-radius: 4px;
+    width: 40%;
+    font-family: sans-serif;
+    text-align: left;
+}
+
+.about-content p {
+    margin: 16px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.about-contact p {
+    padding-bottom: 20px;
+    color: var(--pure-white);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Contact Page Styling */
-.contact-container {
-    background-color: var(--sagebrush);
-    position: relative;
-    min-height: 80vh; 
-    width: 100%;
-    display: flex;
+.contact-layout {
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 40px 5%;
-    background-image: url("https://www.transparenttextures.com/patterns/brushed-alum-dark.png");
 }
-
 .main-message-container {
     padding: 40px;
     width: 100%;
@@ -262,6 +293,17 @@ body {
 
 /* --- Media Queries for Responsiveness --- */
 /* Mobile & Tablet */
+@media (max-width: 1024px) {
+    /* Fix About Page */
+    .main-container {
+        padding-top: 10px;
+    }
+    
+    .about-content {
+        width: 80%;
+    }
+}
+
 @media (max-width: 768px) {
     .logo-img {
         height: 95px; 
@@ -332,5 +374,13 @@ body {
     .btn-hero {
         display: block;         
         margin-bottom: 10px;
+    }
+
+    .about-content {
+        width: 95%;
+    }
+    
+    .about-header h1 {
+        font-size: 1.8rem;
     }
 }
