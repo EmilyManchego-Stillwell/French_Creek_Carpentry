@@ -151,6 +151,7 @@ body {
     margin: 16px;
     padding-left: 5px;
     padding-right: 5px;
+    line-height: 1.5;
 }
 
 .about-contact p {
@@ -327,6 +328,7 @@ body {
     .about-content-container {
         flex: none; 
         width: 100%;
+        font-size: 1.25rem;
     }
 
     .about-content {
@@ -412,9 +414,5 @@ body {
 
     .about-content {
         width: 95%;
-    }
-    
-    .about-header h1 {
-        font-size: 1.8rem;
     }
 }
