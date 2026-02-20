@@ -118,7 +118,42 @@ body {
 }
 
 /* Services Page Styling */
+.services-layout {
+    flex-direction: column;
+    gap: 80px;
+    padding: 80px 5%;
+}
 
+.services-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    gap: 40px;
+}
+
+.services-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+ 
+.services-image img {
+    max-height: 200px;
+}
+
+.services-image, 
+.services-description {
+    flex: 1;
+}
+
+.services-description {
+    background-color: var(--pure-white);
+    color: var(--iron-ore);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
 
 /* About Us Page Styling */
 .about-header {
