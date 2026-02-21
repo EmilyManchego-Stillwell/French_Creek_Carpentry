@@ -31,6 +31,15 @@ body {
     justify-content: center;
 }
 
+.page-image {
+    max-width: 80%;
+    height: auto;
+    background-color: var(--pure-white); 
+    padding: 15px;                      
+    border-radius: 4px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
 /* Header Section Styling */
 .main-header {
     position: fixed;
@@ -138,10 +147,6 @@ body {
     flex-direction: row-reverse;
 }
  
-.services-image img {
-    max-height: 200px;
-}
-
 .services-image, 
 .services-description {
     flex: 1;
@@ -204,15 +209,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.owners-image {
-    max-width: 95%;
-    height: auto;
-    background-color: var(--pure-white); 
-    padding: 15px;                      
-    border-radius: 4px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 /* Contact Page Styling */
@@ -373,7 +369,7 @@ body {
         width: 80%;
     }
 
-    .owners-image {
+    .page-image {
         max-height: 50vh; 
     }
 }
