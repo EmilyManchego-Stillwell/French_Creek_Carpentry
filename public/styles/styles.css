@@ -34,8 +34,8 @@ body {
 .page-image {
     max-width: 80%;
     height: auto;
-    background-color: var(--pure-white); 
-    padding: 15px;                      
+    background-color: var(--pure-white);
+    padding: 15px;
     border-radius: 4px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
@@ -62,7 +62,7 @@ body {
 }
 
 .logo-img {
-    height: 126px; 
+    height: 152px; 
     width: auto;
 }
 
