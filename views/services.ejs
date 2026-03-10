@@ -9,35 +9,80 @@
 <body>
   <%- include("partials/header.ejs") %>
   <div class="main-container services-layout">
+    <div class="services-header page-intro">
+      <h1>Our Services</h1>
+      <p>Not only do we construct beautiful custom woodwork for you, we also provide 
+         installation and interior paint services!
+      </p>
+    </div>
     <section class="services-item">
       <div class="services-image">
-        <img src="/images/services_photos/House_Exterior_Front_After.PNG" class="page-image">
+        <div class="services-gallery">
+          <div class="feature-container">
+            <img src="./images/services_photos/dark_custom_cabinetry.jpg" alt="Dark shaker cabinets." class="page-image feature-img">
+          </div>
+          <div class="thumbnail-container">
+            <img src="./images/services_photos/dark_custom_cabinetry.jpg" alt="Dark shaker cabinets." class="thumbnail active">
+            <img src="./images/services_photos/white_kitchen_shaker_cabinets_round_handles.jpg" alt="Kitchen with white shaker cabinets with round brushed nickel handles" class="thumbnail">
+            <img src="./images/services_photos/gray_blue_kitchen_shaker_pull_bars.jpg" alt="Kitchen with gray-blue shaker cabinets with black bar pulls" class="thumbnail">
+            <img src="./images/services_photos/basement_bar_cabinets.jpg" alt="Basement bar cabinetry with island and decorative aluminum backside of bar." class="thumbnail">
+          </div>
+        </div>
       </div>
       <div class="services-description">
-        <h2>House Refurbishment</h2>
-        <p>Ready for a change in your home? We can help make your house beautiful and feeling new!</p>
+        <h2>Custom Cabinetry</h2>
+        <p>Need custom cabinetry sizes for your kitchen or bathroom remodel? Let us build some
+          beautifully crafted new cabinets for your project!   
+        </p>
       </div>
     </section>
     <section class="services-item">
       <div class="services-image">
-        <img src="/images/services_photos/Bunk_Beds.PNG" class="page-image">
+        <div class="services-gallery">
+          <div class="feature-container">
+            <img src="./images/services_photos/bunk_beds.jpg" alt="Two dark wood custom made bunk beds." class="page-image feature-img">
+          </div>
+          <div class="thumbnail-container">
+            <img src="./images/services_photos/bunk_beds.jpg" alt="Two dark wood custom made bunk beds." class="thumbnail active">
+            <img src="./images/services_photos/bathroom_shiplap.jpg" alt="Bathroom with white shiplap walls installed by French Creek Carpentry." class="thumbnail">
+            <img src="./images/services_photos/before_after_custom_banister.jpg" alt="Before and after photos of custom banister work." class="thumbnail">
+            <img src="./images/services_photos/before_after_custom_bookshelves.jpg" alt="Before and after photos of custom built-in bookshelves." class="thumbnail">
+            <img src="./images/services_photos/before_after_closet_flooring.jpg" alt="Before and after photos of closet flooring going from carpet to wood." class="thumbnail">
+            <img src="./images/services_photos/before_after_six_panel_door.jpg" alt="Before and after photos of custom six panel door" class="thumbnail">
+            <img src="./images/services_photos/before_after_two_panel_door.jpg" alt="Before and after of custom two panel door" class="thumbnail">
+          </div>
+        </div>
       </div>
       <div class="services-description">
-        <h2>Custom Furniture</h2>
-        <p>Let us make you some beautifully crafted custom furniture. Check out our custom bed frames!</p>
+        <h2>Custom Millwork and Furniture</h2>
+        <p>Tired of the boring cookie-cutter feel, we can help transform your house customized to you!
+          From accent walls to doors to new hardwood floors and inlays, we've got you covered!
+        </p>
       </div>
     </section>
     <section class="services-item">
       <div class="services-image">
-        <img src="/images/services_photos/Walnut_Handrail_Before.PNG" class="page-image">
+        <div class="services-gallery">
+          <div class="feature-container">
+            <img src="./images/services_photos/dark_shaker_kitchen_cabinets.jpg" alt="Living room and kitchen with custom cabinetry, trim, and paint services. Dark Shaker style cabinets in kitchen." class="page-image feature-img">
+          </div>
+          <div class="thumbnail-container">
+            <img src="./images/services_photos/dark_shaker_kitchen_cabinets.jpg" alt="Living room and kitchen with custom cabinetry, trim, and paint services. Dark Shaker style cabinets in kitchen." class="thumbnail active">
+            <img src="./images/services_photos/tile_paint_trim_bathroom.jpg" alt="Bathroom picture of French Creek Carpentry tile, paint, trim, and custom cabinetry installation, white." class="thumbnail">
+            <img src="./images/services_photos/before_after_beams_ceiling_fireplace_paint.jpg" alt="Before and after photos of living room with new ceiling cladding and beams, custom fireplace mantle, and paint job." class="thumbnail">
+          </div>
+        </div>
       </div>
       <div class="services-description">
-        <h2>Architectural Woodwork</h2>
-        <p>Tired of the boring cookie cutter feel? We can help make your house feel custome and you!</p>
+        <h2>All Services</h2>
+        <p>Check out photos of our projects where we have incorporated all of our services.
+           Installation of our captivating custom cabinetry, radiantly tasteful trim and tile work, 
+           and invigorating interior painting. 
+        </p>
       </div>
     </section>
   </div>
-  
   <%- include("partials/footer.ejs") %>
+  <script src="/js/gallery.js"></script>
 </body>
 </html>
