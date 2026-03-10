@@ -25,7 +25,7 @@ body {
     min-height: 80vh; 
     width: 100%;
     display: flex;
-    padding: 40px 5%;
+    padding: 80px 5%;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -89,12 +89,12 @@ body {
 .hero {
     background-color: var(--sagebrush);
     position: relative;
-    height: 70vh;
+    min-height: 80vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 0 5%;
+    padding: 100px 5%;
     background-image: url("https://www.transparenttextures.com/patterns/brushed-alum-dark.png");
 }
 
@@ -234,7 +234,8 @@ body {
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    margin-bottom: calc((600px / 2) - 175px);
+    /* margin-bottom: calc((600px / 2) - 175px); */
+    margin-bottom: 20px;
 }
 
 .services-description p {
@@ -426,11 +427,6 @@ body {
 }
 
 .social-links a {
-    /* color: var(--iron-ore);
-    font-size: 1.5rem;
-    opacity: 0.6;
-    transition: all 0.3s ease;
-    text-decoration: none; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -627,6 +623,10 @@ body {
         text-align: center;
     }
 
+    .hero {
+        min-height: 60vh;
+    }
+
     .hero-content h1 {
         font-size: 2rem;        
     }
@@ -644,3 +644,8 @@ body {
         letter-spacing: 0.5px;
     }
 }
+@media (max-width: 375px) {
+     .hero {
+        min-height: 40vh;
+     }   
+    }
