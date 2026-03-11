@@ -23,7 +23,7 @@ app.get("/services", (req, res) => {
 });
 
 app.get("/contact", (req, res) => {
-  res.render("contact.ejs", { success: null });
+  res.render("contact.ejs", { success: null, error: null, enteredData: {} });
 });
 
 app.post("/contact", async (req, res) => {
@@ -31,18 +31,29 @@ app.post("/contact", async (req, res) => {
 
   try {
     // Send data to Google Apps Script
-    await axios.post(config.googleScriptURL, null, {
-      params: {
-        userName,
-        userEmail,
-        userMessage
-      }
+    const response = await axios.post(config.googleScriptURL, {
+      userName,
+      userEmail,
+      userMessage 
     });
 
-    res.render("contact.ejs", { success: "Thanks! Your message has been sent." });
+    // Check if Google actually succeeded
+    if (response.data && response.data.result === "success") {
+      res.render("contact.ejs", { 
+        success: "Thanks! Your message has been sent.",
+        error: null,
+        enteredData: {} 
+      });
+    } else {
+      throw new Error(response.data.message || "Google Script failed");
+    }
   } catch (error) {
-    console.error("Error sending to Google Script:", error);
-    res.status(500).send("Communication error.");
+    console.error("Deployment Error:", error.message);
+    res.render("contact.ejs", { 
+      success: null, 
+      error: "Sorry, there was a problem sending your message. Please try again later.",
+      enteredData: req.body 
+    });
   }
 });
 
